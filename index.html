@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1 class="header_txt">Din personlige handleliste</h1>
+    <!-- Liste 1 -->
+    <div class="List_1_wrapper">
+      <div class="List_1">
+        <h1>
+          Liste over varer du <br />
+          har nok av
+        </h1>
+        <h3>Skriv inn navn på vare her:</h3>
+        <div class="input_field">
+          <input id="List_1_item" type="text" placeholder="Skriv inn vare" />
+          <br />
+          <br />
+          <button onclick="addItem()">Legg til</button>
+        </div>
+        <h2>Dette er produktene du har lagt til:</h2>
+        <ul id="List_1_addedItems"></ul>
+      </div>
+    </div>
+
+    <!-- Liste 2 -->
+    <div class="List_2_wrapper">
+      <div class="List_2">
+        <h1>
+          Liste over varer du <br />
+          begynner du og gå tom for
+        </h1>
+        <h3>Skriv inn navn på vare her:</h3>
+        <div class="input_field">
+          <input id="List_2_item" type="text" placeholder="Skriv inn vare" />
+          <br />
+
+          <br />
+          <button onclick="addListTwoItem()">Legg til</button>
+        </div>
+        <h2>Her vises produktene du har lagt til:</h2>
+
+        <ul id="List_2_addedItems"></ul>
+      </div>
+    </div>
+    <!-- Liste 3 -->
+    <div class="List_3_wrapper">
+      <div class="List_3">
+        <h1>
+          Liste over varer du <br />
+          må handle mer av
+        </h1>
+        <h3>Skriv inn navn på vare her:</h3>
+        <div class="input_field">
+          <input id="List_3_item" type="text" placeholder="Skriv inn vare" />
+          <br />
+          <input
+            id="List_3_price"
+            type="number"
+            min="1"
+            placeholder="Skriv inn pris"
+          />
+          <br />
+
+          <button onclick="addListThreeItem()">Legg til</button>
+        </div>
+        <div class="total_container">
+          <h2>Totalsum for varene dine:</h2>
+          <h3 id="totalSum"></h3>
+        </div>
+        <h2>Her vises produktene du har lagt til:</h2>
+
+        <ul id="List_3_addedItems"></ul>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
