@@ -6,9 +6,9 @@ const listTwoAddedItems = document.getElementById("List_2_addedItems");
 const listThree = document.getElementById("List-3");
 const listThreeAddedItems = document.getElementById("List_3_addedItems");
 
-alert(
-  "Velkommen til din helt egne handleliste. \n Denne bruker du på følgende måte: \n\n 1.       Skriv inn varer du må kjøpe mer av. \n 2.       Få oversikt over varer du har lagt inn\n 3.       Ønsker du å slette varer, kan du enkelt gjøre dette"
-);
+// alert(
+//   "Velkommen til din helt egne handleliste. \n Denne bruker du på følgende måte: \n\n 1.       Skriv inn varer du må kjøpe mer av. \n 2.       Få oversikt over varer du har lagt inn\n 3.       Ønsker du å slette varer, kan du enkelt gjøre dette"
+// );
 
 listOneArray = [];
 
@@ -19,7 +19,7 @@ function addItem() {
     item: listOneItemInput,
   });
 
-  console.log("Liste 1 Nytt produkt:", listOneArray);
+  console.log("Liste 1 Ny vare:", listOneArray);
   listOneItems();
 }
 
@@ -48,7 +48,7 @@ function addListTwoItem() {
     item: listTwoItemInput,
   });
 
-  console.log("List2_Ny Vare:", listTwoArray);
+  console.log("Liste 2 Ny Vare:", listTwoArray);
   listTwoItems();
 }
 
@@ -76,15 +76,14 @@ function addListThreeItem() {
     document.getElementById("List_3_price").value
   );
 
-  listThreeArray.push({
-    item: listThreeItemInput,
-    price: listThreePriceInput,
-  });
-
-  console.log("Ny Vare:", listThreeArray);
-  listThreeItems();
-
   if (listThreePriceInput > 0) {
+    listThreeArray.push({
+      item: listThreeItemInput,
+      price: listThreePriceInput,
+    });
+    listThreeItems();
+
+    console.log("Liste 3 Ny Vare:", listThreeArray);
   } else {
     alert("Pris kan ikke være 0,- kr");
   }
